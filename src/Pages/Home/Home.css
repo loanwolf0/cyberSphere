@@ -1,0 +1,21 @@
+.home-main {
+    background-color: white;
+    border-radius: 40px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 10px 10px 15px rgba(33, 65, 58, 0.8), -15px -15px 15px rgba(64, 100, 91, 0.6);
+  }
+
+  .home-main .aboutTesti{
+    background: url('..//..//assets/bg_grad.jpg');
+    padding: 30px;
+    
+  }
+
+  
+  @media (max-width: 800px) {
+    .home-main{
+      border-radius: 0px;
+      
+    }
+  }

@@ -1,0 +1,77 @@
+/* Navbar.css */
+
+.custom-a {
+  position: relative; /* Add position relative to create space for the line */
+  font-weight:bold;
+  font-size: 19px;
+  
+
+}
+
+.custom-a:hover {
+  color: rgb(68,134,119);
+  font-weight: bold;
+}
+
+.custom-a .line {
+  position: absolute;
+  bottom: -5px; /* Adjust to position the line below the text */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(68,134,119);
+  transition: width 0.5s ease-in-out; /* Adjusted transition duration */
+}
+
+.custom-a:hover .line {
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(68,134,119, 0.9);
+  
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.navlinks{
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.mobileNav{
+  display: none;
+}
+
+
+/* mobile responsive */
+
+@media screen and (max-width:800px) {
+  .mobileNav{
+    display: block;
+  }
+
+  .navlinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    height: auto;
+    width: 60%;
+    gap: 25px;
+    padding: 20px;
+    color: white;
+    background-color: gray;
+    top: 100px;
+    left: -60%;
+    transition: all .5s;
+  }
+
+  .navlinks.active{
+    left: 0;
+  }
+}
