@@ -7,7 +7,7 @@ const Testimonials = () => {
   return (
     <div className="Testimonials-container mb-10">
       <div className="testi-title flex justify-center items-center w-full h-20 text-white  relative">
-        <h2 className="  text-4xl  w-100 font-bold rounded-xl">
+        <h2 className=" text-3xl md:text-4xl  w-100 font-bold rounded-xl">
           <span className='text-[rgb(255,255,255)]'>OUR </span>
           <span className='text-[rgb(104,68,202)]'> MENTORS!</span>
         </h2>

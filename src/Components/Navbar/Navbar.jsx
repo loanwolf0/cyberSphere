@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import logo from '../../assets/logo.png'
 import './Navbar.css';
 
 const Navbar = () => {
@@ -34,7 +35,7 @@ const Navbar = () => {
   return (
     <nav className={`flex flex-row justify-between items-center  gap-5 p-10`}>
       
-      <div className="mobile_cont flex flex-row       justify-center items-center ">
+      <div className="mobile_cont flex flex-row justify-center items-center ">
 
         <div className="mobileNav">
           <button onClick={handleMobile} className={`w-auto h-auto items-center justify-center flex p-3 `}>
@@ -42,9 +43,11 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className={`flex items-center ${isSearchActive ? 'hidden' : ''}`}>
-          <div className="logo text-pink-500 text-3xl mr-2 transition-transform transform hover:rotate-180 cursor-pointer">Logo</div>
-          <div className="name text-lg font-bold text-dark-blue">CyberSphere</div>
+        <div className={`flex items-center mobileContainer ${isSearchActive ? 'hidden' : ''}`}>
+          <div className="logo text-pink-500 text-3xl mr-2 transition-transform transform logo_nav hover:rotate-90 cursor-pointer">
+              <img src={logo} alt="logo" className="mobileLogo" />
+          </div>
+          <div className="name mobileName text-lg font-bold text-dark-blue">Cyber-sphere</div>
         </div>
 
       </div>
@@ -52,46 +55,46 @@ const Navbar = () => {
       <div className={`${isSearchActive ? 'hidden' : ''}  `}>
 
         <ul className={`${isClicked ? 'navlinks active' : 'navlinks'}`}>
-          <li className="relative">
+          <li className="relative" onClick={handleMobile}>
             <a
               href="#home"
-              className="text-black text-lg hover:text-[rgb(68,134,119)] cursor-pointer custom-a"
+              className="text-black text-lg cursor-pointer custom-a"
             >
               Home
               <div className="line"></div>
             </a>
           </li>
-          <li className="relative">
+          <li className="relative" onClick={handleMobile}>
             <a
               href="#about"
-              className="text-black text-lg hover:text-[rgb(68,134,119)] cursor-pointer custom-a"
+              className="text-black text-lg cursor-pointer custom-a"
             >
               About
               <div className="line"></div>
             </a>
           </li>
-          <li className="relative">
+          <li className="relative" onClick={handleMobile}>
             <a
               href="#courses"
-              className="text-black text-lg hover:text-[rgb(68,134,119)] cursor-pointer custom-a"
+              className="text-black text-lg cursor-pointer custom-a"
             >
               Courses
               <div className="line"></div>
             </a>
           </li>
-          <li className="relative">
+          <li className="relative" onClick={handleMobile}>
             <a
               href="#services"
-              className="text-black text-lg hover:text-[rgb(68,134,119)] cursor-pointer custom-a"
+              className="text-black text-lg cursor-pointer custom-a"
             >
               Services
               <div className="line"></div>
             </a>
           </li>
-          <li className="relative">
+          <li className="relative" onClick={handleMobile}>
             <a
               href="#contact"
-              className="text-black text-lg hover:text-[rgb(68,134,119)] cursor-pointer custom-a"
+              className="text-black text-lg cursor-pointer custom-a"
             >
               Contact
               <div className="line"></div>

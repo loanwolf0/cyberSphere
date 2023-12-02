@@ -42,7 +42,7 @@
     color: yellow;
   }
   
-  .star-half::before {
+  .star-half {
     content: '\2605'; /* Unicode character for half star */
     color: yellow;
     position: absolute;

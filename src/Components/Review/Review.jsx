@@ -1,7 +1,7 @@
 import React from 'react';
 import './Review.css';
 
-const Review = () => {
+const Review = ({revDes,revTitle,revName}) => {
   return (
     <div className="review-card">
       <div className="review-header">
@@ -15,11 +15,10 @@ const Review = () => {
         <p className="review-date">2 days ago</p>
       </div>
       <div className="review-content">
-        <h1 className="reviewer-name">John Doe</h1>
-        <p className="reviewer-role">UI/UX Designer</p>
+        <h1 className="reviewer-name">{revName}</h1>
+        <p className="reviewer-role">{revTitle}</p>
         <p className="review-text">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit, libero sed
-          convallis porttitor, lacus libero bibendum risus, et tristique elit enim nec ante."
+          {revDes}
         </p>
       </div>
     </div>

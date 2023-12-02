@@ -11,6 +11,9 @@ import AllReviws from '../../Components/AllReviews/AllReviws'
 import ContactForm from '../../Components/ContactFORM/ContactForm'
 import FAQ from '../../Components/Faq/Faq'
 import Footer from '../../Components/Footer/Footer'
+import Internship from '../../Components/Internship/Internship'
+import Our_internship from '../../Components/Our_internship/Our_internship'
+import About from '../About/About'
 
 const Home = () => {
   return (
@@ -20,14 +23,16 @@ const Home = () => {
       <WaterWave/>
        <Title/>
        <Waterdrop/>
+       <Our_internship/>
        <AboutSection/>
-       <div className="aboutTesti">
+        {/* <div className="aboutTesti">
           <Testimonials/>
-       </div>
+       </div> */}
       <AllReviws/>
-      {/* <ContactForm/>  */}
+      <ContactForm/> 
       <FAQ/> 
-      {/* <Footer/>   */}
+      <Footer/>   
+      {/* <About/> */}
     </div>
   )
 }
